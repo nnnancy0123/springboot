@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+</head>
+<body>
+	<h1 id="myH1"></h1>
+	<script>
+		document.getElementById("myH1").innerHTML = "Welcome to the page";
+		
+	
+	</script>
+<p>検証コードを入力ください</p>
+	<input id="numb">
+	<button type="button" onclick="myFunction()">提出</button>
+	<p id="demo"></p>
+
+	<script>
+	function myFunction(){
+		var x, text;
+		
+		x = document.getElementById("numb").value;
+		
+		if (isNaN(x) || x<1 || x > 10){
+			text = "fault";}else{
+				text="ok"
+			}
+			document.getElementById("demo").innerHTML = text;
+	}
+	</script>
+
+	<form action="/registerProcess" method="post">
+		id<input type="text" name="id"><br> name <input
+			type="text" name="name"> <br>age<input type="text"
+			name="age"><br>job<input type="text" name="job">
+		<a href="/Infopage.html">
+			<button type="submit">register</button>
+		</a>
+	</form>
+
+
+</body>
+</html>

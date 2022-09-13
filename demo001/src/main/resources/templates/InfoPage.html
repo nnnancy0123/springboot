@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">NAME</th>
+				<th scope="col">Age</th>
+				<th scope="col">Job</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="list : ${userInfoList}">
+				<td th:text="${list.id}">1</th>
+				<td th:text="${list.name}">Mark</td>
+				<td th:text="${list.age}">Otto</td>
+				<td th:text="${list.job}">@mdo</td>
+				<td><input type="button" value="編集"></td>
+				<td ><input type="button" value="削除"></td>
+			</tr>
+			
+		</tbody>
+	</table>
+
+</body>
+</html>
